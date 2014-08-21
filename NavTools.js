@@ -7,8 +7,8 @@ define([
 	'dijit/form/Button',
 	'dojo/_base/lang',
 	'dojo/on',
-	'dojo/text!./NavToolbar/templates/NavToolbar.html',
-	'xstyle/css!./NavToolbar/css/NavToolbar.css'
+	'dojo/text!./NavTools/templates/NavTools.html',
+	'xstyle/css!./NavTools/css/NavTools.css'
 ], function (declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, Navigation, Button, lang, on, NavToolbarTemplate, css) {
     return declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
         widgetsInTemplate: true,
