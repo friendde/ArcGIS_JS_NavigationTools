@@ -9,36 +9,39 @@ define([
 	'dojo/on',
 	'dojo/text!./NavTools/templates/NavTools.html',
 	'xstyle/css!./NavTools/css/NavTools.css'
-], function (declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, Navigation, Button, lang, on, NavToolbarTemplate, css) {
+], function (declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, Navigation, Button, lang, on, NavToolsTemplate, css) {
     return declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
         widgetsInTemplate: true,
-        templateString: NavToolbarTemplate,
-        navToolbar: null,
+        templateString: NavToolsTemplate,
+        navTools: null,
         postCreate: function(){
-          this.navToolbar = new Navigation(this.map);
-          this.navToolbar.on('onExtentHistoryChange', lang.hitch(this, 'extentHistoryChangeHandler'));
+          this.navTools = new Navigation(this.map);
+          this.navTools.on('onExtentHistoryChange', lang.hitch(this, 'extentHistoryChangeHandler'));
 		},
 
         zoomIn: function() {
-			this.navToolbar.activate(Navigation.ZOOM_IN);
+			this.map.setMapCursor("url('js/gis/dijit/NavTools/images/zoomin.cur'),auto");
+			this.navTools.activate(Navigation.ZOOM_IN);
         },
         zoomOut: function() {
-			this.navToolbar.activate(Navigation.ZOOM_OUT);
+			this.map.setMapCursor("url('js/gis/dijit/NavTools/images/zoomout.cur'),auto");
+			this.navTools.activate(Navigation.ZOOM_OUT);
         },
         fullExtent: function () {
-			this.navToolbar.zoomToFullExtent();
+			this.navTools.zoomToFullExtent();
         },		
 		prevExtent: function () {
-			this.navToolbar.zoomToPrevExtent();
+			this.navTools.zoomToPrevExtent();
         },
         nextExtent: function () {
-			this.navToolbar.zoomToNextExtent();
+			this.navTools.zoomToNextExtent();
         },		
 		pan: function () {
-            this.navToolbar.activate(Navigation.PAN);
+            this.map.setMapCursor("url('js/gis/dijit/NavTools/images/hand.cur'),auto");
+			this.navTools.activate(Navigation.PAN);
         },
 		deactivate: function () {
-			this.navToolbar.deactivate();
+			this.navTools.deactivate();
         },
 
         disconnectMapClick: function() {
@@ -50,7 +53,7 @@ define([
         },
 		
 		extentHistoryChangeHandler: function (evt) {
-            this.navToolbar.deactivate();
+            this.navTools.deactivate();
             this.connectMapClick();
         }
 	});
