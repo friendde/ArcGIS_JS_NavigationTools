@@ -1,6 +1,8 @@
-Compatible for CMV v1.2.0. Please note that CMV 1.3.0 was released recently and this widget has not yet been verified compatible.
+Compatible for CMV v1.2.0. 
+Please note that CMV v1.3.0 was released recently and this widget is not yet compatible.
+I will update this widget asap for use in CMV v1.3.0
 
-This widget created as an addition to [David Spriggs Configurable Map Viewer](https://github.com/DavidSpriggs/ConfigurableViewerJSAPI), aka CMV. Designed for use in his project using the file structure indicated there. Original source code was from this ESRI sample https://developers.arcgis.com/javascript/jssamples/toolbar_navigation.html which was a single html page. ArcGIS_JS_NavigationTools is in widget format with seperate css, html, and javascript files for CMV.
+This widget was created as an addition to [David Spriggs Configurable Map Viewer](https://github.com/DavidSpriggs/ConfigurableViewerJSAPI), aka CMV. Designed for use in his project using the file structure indicated there. Original source code was from this ESRI sample https://developers.arcgis.com/javascript/jssamples/toolbar_navigation.html which was a single html page. ArcGIS_JS_NavigationTools is in widget format with seperate css, html, and javascript files for use in CMV.
 
 Please see this projects [how-to Wiki] (https://github.com/friendde/ArcGIS_JS_NavigationTools/wiki/How-to-add-widget-to-CMV) for details on how to configure CMV to load this widget.
 
