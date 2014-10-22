@@ -10,46 +10,23 @@ Please see this projects [how-to Wiki] (https://github.com/friendde/ArcGIS_JS_Na
 
 ## Adding to CMV
 ```javascript
-panes: {
-	// left: {
-	// 	splitter: true
-	// },
-	// right: {
-	// 	id: 'sidebarRight',
-	// 	placeAt: 'outer',
-	// 	region: 'right',
-	// 	splitter: true,
-	// 	collapsible: true
-	// },
-	// bottom: {
-	// 	id: 'sidebarBottom',
-	// 	placeAt: 'outer',
-	// 	splitter: true,
-	// 	collapsible: true,
-	// 	region: 'bottom'
-	// },
-	top: {
-		id: 'sidebarTop',
-		placeAt: 'outer',
-		collapsible: true,
-		region: 'top'
-	}
-},
+
 widgets: {
-   navtools: {
-   include: true,
-   id: 'navtools',
-   type: 'contentPane',
-   canFloat: false,
-   path: 'gis/dijit/NavTools',
-   title: 'Tools',
-   open: false,
-   position: 0,
-   placeAt: 'top',
-   options: {
-      map: true,
-      mapRightClickMenu: true,
-      mapClickMode: true
-      }
-},
+	navtools: {
+		include: true,
+		id: 'navtools',
+		type: 'titlePane',
+		canFloat: false,
+		path: 'gis/dijit/NavTools',
+		title: 'Navigation Tools',
+		open: false,
+		position: 0,
+		placeAt: 'right',
+		options: {
+			map: true,
+                	mapRightClickMenu: true,
+			mapClickMode: true
+		}
+	}
+}
 ```
