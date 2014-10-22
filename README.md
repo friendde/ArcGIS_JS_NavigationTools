@@ -24,7 +24,7 @@ widgets: {
 		placeAt: 'right',
 		options: {
 			map: true,
-                	mapRightClickMenu: true,
+			mapRightClickMenu: true,
 			mapClickMode: true
 		}
 	}
